@@ -1,36 +1,95 @@
-/* Reset */
+/* ===============================
+   GLOBAL RESET & BASE STYLES
+   =============================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #000; /* optional: gives a darker theme */
+  color: white;
 }
 
-/* Header */
+/* ===============================
+   HEADER & NAVIGATION
+   =============================== */
 header {
   background: black;
   color: white;
-  padding: 10px;
-}
-nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
-/* Hero */
+/* Logo */
+.site-logo {
+  height: 60px;       /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
+/* Navigation container */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Navigation links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #c9f27e; /* accent hover color */
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
 section {
   padding: 20px;
   text-align: center;
 }
+
 section img {
   width: 300px;
   border-radius: 10px;
 }
 
-/* Footer */
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE STYLING
+   =============================== */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;   /* stack logo + nav vertically */
+    text-align: center;
+  }
+
+  .site-logo {
+    margin-bottom: 10px;      /* space between logo and nav */
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 1rem;
+  }
 }
