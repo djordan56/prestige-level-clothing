@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Checkout – Prestige Level Clothing</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,27 +21,28 @@
 </header>
 
 
-  <main>
-    <h2>Enter Your Details</h2>
-    <form>
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
+<main>
+  <h2>Checkout</h2>
+  <form onsubmit="return validateCheckoutForm()">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-      <label for="address">Address:</label><br>
-      <input type="text" id="address" name="address"><br><br>
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" required><br><br>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-      <button type="submit">Place Order</button>
-    </form>
-  </main>
+    <button type="submit">Place Order</button>
+  </form>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Prestige Level Clothing</p>
-  </footer>
-
+<footer>
+  <p>&copy; 2025 Prestige Level Clothing</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
